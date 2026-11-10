@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed": "#00201d", "secondary-fixed": "#ffddb8", "secondary-fixed-dim": "#ffb95f", "secondary-container": "#fea619", "surface-container": "#eaedff", "on-tertiary": "#ffffff", "on-background": "#131b2e", "primary-container": "#008378", "on-error": "#ffffff", "secondary": "#855300", "on-primary-container": "#f4fffc", "surface-container-high": "#e2e7ff", "surface": "#faf8ff", "tertiary-fixed": "#ffdadb", "primary": "#00685f", "on-tertiary-container": "#fffbff", "surface-container-low": "#f2f3ff", "primary-fixed-dim": "#6bd8cb", "surface-tint": "#006a61", "on-surface": "#131b2e", "error": "#ba1a1a", "tertiary": "#b90538", "on-secondary-fixed-variant": "#653e00", "outline": "#6d7a77", "on-tertiary-fixed": "#40000d", "surface-dim": "#d2d9f4", "on-primary": "#ffffff", "primary-fixed": "#89f5e7", "on-tertiary-fixed-variant": "#92002a", "tertiary-fixed-dim": "#ffb2b7", "error-container": "#ffdad6", "on-secondary-fixed": "#2a1700", "inverse-on-surface": "#eef0ff", "on-secondary-container": "#684000", "inverse-primary": "#6bd8cb", "tertiary-container": "#dc2c4f", "surface-variant": "#dae2fd", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#005049", "on-secondary": "#ffffff", "inverse-surface": "#283044", "on-surface-variant": "#3d4947", "surface-container-highest": "#dae2fd", "outline-variant": "#bcc9c6", "background": "#faf8ff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "margin-desktop": "2.5rem", "space-sm": "0.5rem", "space-xs": "0.375rem", "space-lg": "1.25rem", "gutter-desktop": "1.5rem", "space-3xl": "3rem", "margin": "1rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-2xl": "2rem", "space-2xs": "0.25rem", "space-xl": "1.5rem", "gutter-tablet": "1.25rem", "space-base": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "display-hero-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "600" }], "display-hero": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;min-height:100vh;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<title>SlotRescue</title></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-40 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-base flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center cursor-pointer" id="header-logo"><span class="material-symbols-outlined text-primary text-[22px]">bolt</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">SlotRescue</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded-full">ZA</span></div><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-primary">Live Queue Active</span></div></div></div><div class="flex items-center gap-space-sm"><button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary hover:opacity-90 active:scale-95 transition-all" id="header-settings-shortcut"><span class="material-symbols-outlined text-[18px]">person</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface px-space-base"><div class="flex flex-col w-full pb-4">
+<!-- VIEW: DASHBOARD -->
+<div class="flex flex-col space-y-5" id="view-dashboard">
+<!-- STUDIO OVERVIEW & REPUTATION BANNER -->
+<div class="relative overflow-hidden rounded-lg bg-surface-container p-space-base shadow-sm">
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">All Service Types</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span id="biz-location-display">Rosebank Mall, JHB</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 truncate" id="biz-name-display">Demo Business</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="biz-subtext">Appointments and consent-first client alerts • South Africa</p>
+</div>
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 shadow-sm border border-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Local service business owner" id="biz-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgdJWXtMI2ggXW2xM2HJk7CcZxTG3UNjH-ZrgCjj864YQw0Hc_-4vAYRqVlddt1sDS44G3IfzgHSylpNqaLilnnq8zK0Vhvy7gfqwDqzWcrkJtUirZnFFndH7aCV7SIWlHcptBEzIMKGCt_D2-7EM4A1TjI3TX8Rl7jNTYfxocqRWL8MMmoZMnC4-IyokmNhS6fd-lSxOwSAwuLUOQZn8khxFeyw-WxD9RA5ssL_qinrpXSTidAH-"/>
+</div>
+</div>
+<!-- Live Fill Streak Sparkle -->
+<div class="mt-3 pt-3 flex items-center justify-between bg-surface-container-lowest/80 backdrop-blur-md rounded px-3 py-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">92% fill rate within 18 mins</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Fast-fill Mode ON</span>
+</div>
+</div>
+<!-- SUMMARY METRIC CARDS -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Metric 1: Open -->
+<div class="flex flex-col rounded bg-surface-container-lowest p-3 shadow-sm border border-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Open</span>
+<div class="w-2 h-2 rounded-full bg-secondary-container"></div>
+</div>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1 font-bold" id="metric-open-count">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5">Ready to broadcast</span>
+</div>
+<!-- Metric 2: Sent -->
+<div class="flex flex-col rounded bg-surface-container-lowest p-3 shadow-sm border border-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sent</span>
+<span class="material-symbols-outlined text-[14px] text-primary">cell_tower</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1 font-bold" id="metric-sent-count">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5">Awaiting claims</span>
+</div>
+<!-- Metric 3: Saved -->
+<div class="flex flex-col rounded bg-surface-container-lowest p-3 shadow-sm border border-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Saved</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary mt-1 font-bold" id="metric-saved-sum">R0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5" id="metric-appointments-week">0 appointments this week</span>
+</div>
+</div>
+<!-- PRIMARY ACTION: ADD APPOINTMENT HERO BUTTON -->
+<button class="w-full flex items-center justify-center gap-space-xs py-3.5 px-space-base rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md active:scale-[0.98] transition-transform hover:bg-primary-container" id="open-modal-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Add Appointment</span>
+</button>
+<!-- AVAILABLE APPOINTMENTS SECTION HEADER -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Available Appointments</h3>
+<span class="font-label-sm text-label-sm bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full font-bold" id="slots-badge">0 Live</span>
+</div>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary active:opacity-60" id="refresh-slots" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Auto-sync</span>
+</button>
+</div>
+<!-- APPOINTMENT LIST -->
+<div class="flex flex-col space-y-3.5" id="slots-container">
+</div>
+<!-- RECENT ACTIVITY FEED -->
+<div class="flex flex-col space-y-3 pt-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Appointments</h3>
+<span class="font-label-sm text-label-sm text-primary font-medium">Live Feed</span>
+</div>
+<div class="flex flex-col space-y-2" id="activity-container"></div>
+</div>
+</div>
+<!-- VIEW: WAITLIST (STANDBY QUEUE) -->
+<div class="flex flex-col space-y-4 hidden" id="view-waitlist">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Client Waitlist Queue</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live POPIA-verified standby clients waiting for last-minute alerts</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2.5 py-1 rounded-full font-semibold" id="waitlist-count-badge">0 Standby</span>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-transform flex items-center gap-1" id="add-waitlist-client-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Add Client</span>
+</button>
+</div>
+</div>
+<!-- Search & Filter Bar -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-full bg-surface-container-lowest border border-surface-container-high text-on-surface font-body-sm text-body-sm outline-none focus:border-primary transition-colors" id="waitlist-search-input" placeholder="Search clients or phone..." type="text"/>
+</div>
+<!-- Filter chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 text-label-sm">
+<button class="waitlist-filter px-3 py-1 rounded-full bg-primary text-on-primary font-semibold shrink-0" data-filter="all" type="button">All Clients</button>
+<button class="waitlist-filter px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container shrink-0" data-filter="today" type="button">Available Today</button>
+<button class="waitlist-filter px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container shrink-0" data-filter="vip" type="button">VIP / Frequent</button>
+</div>
+<div class="hidden bg-surface-container-lowest p-space-base rounded-lg shadow-sm space-y-3 border border-surface-container-low" id="waitlist-client-form-wrap">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="waitlist-form-title">Add Waitlist Client</h3>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low" id="cancel-waitlist-form" type="button" aria-label="Close client form">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<input class="col-span-2 w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="waitlist-client-name" maxlength="100" placeholder="Client name" type="text"/>
+<input class="col-span-2 w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="waitlist-client-phone" placeholder="South African mobile number" type="tel"/>
+<input class="w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="waitlist-client-availability" maxlength="100" placeholder="Availability" type="text"/>
+<input class="w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="waitlist-client-preferred-time" placeholder="Preferred time" type="text"/>
+<input class="w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="waitlist-client-preferred-service" placeholder="Preferred service" type="text"/>
+<select class="w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="waitlist-client-channel">
+<option value="">No preferred channel</option>
+<option value="whatsapp">WhatsApp</option>
+<option value="sms">SMS</option>
+</select>
+<select class="w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="waitlist-client-consent">
+<option value="pending">Consent pending</option>
+<option value="granted">Consent granted</option>
+<option value="withdrawn">Consent withdrawn</option>
+</select>
+<label class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface">
+<input class="accent-primary" id="waitlist-client-vip" type="checkbox"/>
+VIP / frequent client
+</label>
+</div>
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm" id="cancel-waitlist-form-text" type="button">Cancel</button>
+<button class="px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold" id="save-waitlist-client" type="button">Save Client</button>
+</div>
+</div>
+<!-- Standby Queue List -->
+<div class="flex flex-col space-y-2.5" id="waitlist-items-container">
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Want to offer an unscheduled appointment?</span>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-transform" id="waitlist-create-opening-btn">
+      + Create Appointment
+    </button>
+</div>
+</div>
+<!-- VIEW: SETTINGS (FULL EMBEDDED VIEW) -->
+<div class="flex flex-col space-y-4 hidden" id="view-settings">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container-high">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Business Settings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Business profile and service catalog</p>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors" id="back-to-dashboard-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Dashboard</span>
+</button>
+</div>
+<!-- BUSINESS PROFILE DETAILS -->
+<div class="bg-surface-container-lowest p-space-base rounded-lg shadow-sm space-y-3.5 border border-surface-container-low">
+<h4 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">storefront</span>
+<span>Trading Profile</span>
+</h4>
+<div class="space-y-3">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="settings-biz-name">Business name</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none border border-surface-container-high focus:border-primary" id="settings-biz-name" type="text" value="Demo Business"/>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="settings-hub-loc">Hub Location (ZA)</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none border border-surface-container-high focus:border-primary" id="settings-hub-loc" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="settings-phone">Contact Phone</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none border border-surface-container-high focus:border-primary" id="settings-phone" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="settings-lead-provider">Default Provider / Staff Member</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none border border-surface-container-high focus:border-primary" id="settings-lead-provider" type="text"/>
+</div>
+</div>
+</div>
+<!-- SERVICE CATALOG MANAGEMENT -->
+<div class="bg-surface-container-lowest p-space-base rounded-lg shadow-sm space-y-3.5 border border-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">design_services</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Service Catalog</h4>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-full hover:bg-surface-container-high" id="open-add-service-btn" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>+ Add Service</span>
+</button>
+</div>
+<select class="w-full h-10 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="service-category-filter" aria-label="Filter services by category">
+<option value="">All categories</option>
+<option value="Beauty and Hair">Beauty and Hair</option>
+<option value="Home Services">Home Services</option>
+<option value="Education and Tutoring">Education and Tutoring</option>
+<option value="Health and Wellness">Health and Wellness</option>
+<option value="Other">Other</option>
+</select>
+<!-- Dynamic Service Catalog List -->
+<div class="space-y-2" id="catalog-list-container">
+<!-- Services are grouped by category -->
+</div>
+<!-- Inline Add New Service Form (Hidden by default) -->
+<div class="hidden bg-surface-container-low p-3 rounded-lg space-y-2 border border-surface-container-high" id="new-service-form">
+<h5 class="font-label-md text-label-md text-on-surface font-semibold">New Service</h5>
+<select class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="new-service-category">
+<option value="Beauty and Hair">Beauty and Hair</option>
+<option value="Home Services">Home Services</option>
+<option value="Education and Tutoring">Education and Tutoring</option>
+<option value="Health and Wellness">Health and Wellness</option>
+<option value="Other">Other</option>
+</select>
+<input class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="new-service-name" placeholder="Service name" type="text"/>
+<div class="grid grid-cols-2 gap-2">
+<input class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="new-service-duration" min="1" placeholder="Duration (min)" step="1" type="number" value="60"/>
+<div class="flex items-center gap-2">
+<input class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm outline-none border border-surface-container-high" id="new-service-price" min="0.01" placeholder="Price in ZAR" step="0.01" type="number" value="450"/>
+</div>
+</div>
+<div class="flex justify-end gap-2 pt-1">
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm" id="cancel-new-service" type="button">Cancel</button>
+<button class="px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold" id="save-new-service-entry" type="button">Add Service</button>
+</div>
+</div>
+</div>
+<!-- POPIA & COMPLIANCE BOX -->
+<div class="bg-surface-container-lowest p-space-base rounded-lg shadow-sm space-y-3 border border-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">POPIA Compliance &amp; WhatsApp Opt-in</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Under South African Protection of Personal Information Act (POPIA), clients must provide express consent before a business sends appointment messages.
+    </p>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" id="popia-enforce-chk" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface font-medium">Strict POPIA verification required before broadcast</span>
+</label>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2.5 py-0.5 rounded-full font-semibold">Active</span>
+</div>
+</div>
+<!-- SAVE BUTTON -->
+<div class="pt-2">
+<button class="w-full h-12 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md active:scale-[0.98] transition-all flex items-center justify-center gap-2 hover:bg-primary-container" id="save-settings-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+<span>Save Business Settings</span>
+</button>
+</div>
+</div>
+<!-- ADD OPENING INTERACTIVE MODAL -->
+<div class="fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/60 backdrop-blur-sm hidden transition-opacity" id="add-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-xl p-space-base shadow-2xl flex flex-col space-y-4 max-h-[85vh] overflow-y-auto">
+<div class="w-10 h-1 bg-surface-container-highest rounded-full mx-auto mb-1"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">add</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight" id="opening-form-title">Create Appointment</h3>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="modal-biz-sublabel">Demo Business</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low" id="close-modal-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- FORM -->
+<form class="space-y-3.5" id="add-opening-form">
+<!-- Dynamic Service Picker -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="form-service">Service</label>
+<div class="relative">
+<select class="w-full h-12 px-3 pr-8 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container appearance-none border border-surface-container-high" id="form-service">
+<!-- Dynamically populated from active catalog -->
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Assigned provider -->
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="form-provider">Provider / Staff Member</label>
+</div>
+<input class="w-full h-12 px-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container border border-surface-container-high" id="form-provider" type="text"/>
+</div>
+<!-- Date & Start Time (24h) -->
+<div class="grid grid-cols-2 gap-2.5">
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="form-date">Date</label>
+<input class="w-full h-12 px-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container border border-surface-container-high" id="form-date" type="date" required=""/>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="form-time">Start Time</label>
+<input class="w-full h-12 px-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container border border-surface-container-high" id="form-time" type="time" required=""/>
+</div>
+</div>
+<!-- Quick time chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto text-[12px]">
+<span class="text-on-surface-variant shrink-0 font-medium">Quick 24h:</span>
+<button class="time-chip px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-primary-fixed" data-time="11:00" type="button">11:00</button>
+<button class="time-chip px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-primary-fixed" data-time="14:00" type="button">14:00</button>
+<button class="time-chip px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-primary-fixed" data-time="16:30" type="button">16:30</button>
+<button class="time-chip px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-primary-fixed" data-time="18:00" type="button">18:00</button>
+</div>
+<!-- Duration Picker (Pill Selector) -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Duration (Minutes)</label>
+<div class="grid grid-cols-4 gap-2" id="duration-picker">
+<button class="dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-val="45" type="button">45m</button>
+<button class="dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-val="60" type="button">60m</button>
+<button class="dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-val="75" type="button">75m</button>
+<button class="dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-primary text-on-primary shadow-sm" data-val="90" type="button">90m</button>
+</div>
+<input id="selected-duration" type="hidden" value="90"/>
+</div>
+<!-- Price in ZAR or Quote Required -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="form-price">Price (ZAR)</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input class="accent-primary" id="quote-required-chk" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quote required</span>
+</label>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-headline-sm text-headline-sm text-on-surface-variant font-bold" id="price-currency-symbol">R</span>
+<input class="w-full h-12 pl-8 pr-3 rounded bg-surface-container-low text-on-surface font-headline-sm text-headline-sm font-semibold outline-none focus:bg-surface-container border border-surface-container-high" id="form-price" min="0.01" step="0.01" required="" type="number" value="850"/>
+</div>
+</div>
+<!-- Incentive Note -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="form-incentive">Appointment Perk (Optional)</label>
+<input class="w-full h-12 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container border border-surface-container-high" id="form-incentive" placeholder="e.g. Free scalp massage or 10% discount for quick claim" type="text"/>
+</div>
+<!-- Submit Button -->
+<div class="pt-2">
+<button class="w-full h-12 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md active:scale-[0.98] transition-all flex items-center justify-center gap-2 hover:bg-primary-container" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span id="opening-submit-label">Save Appointment</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- CONNECTED BROADCAST SLOT MODAL / SHEET -->
+<div class="fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/60 backdrop-blur-sm hidden transition-opacity" id="broadcast-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-xl p-space-base shadow-2xl flex flex-col space-y-4 max-h-[88vh] overflow-y-auto">
+<div class="w-10 h-1 bg-surface-container-highest rounded-full mx-auto mb-1"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">cell_tower</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Offer Appointment</h3>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low" id="close-broadcast-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Targeted Opening Overview Card -->
+<div class="bg-surface-container-low p-3.5 rounded-lg flex flex-col space-y-1.5 border border-surface-container-high">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="broadcast-service-name">Knotless Braids</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="broadcast-price">R1,600</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span id="broadcast-details">Tomorrow • 14:00 • Thandi Mokoena</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Awaiting Claims • Not Filled</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-3 rounded bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">notifications_active</span>
+<span id="broadcast-message-preview">SlotRescue • Demo Business has an appointment available. Reply to book.</span>
+</div>
+<!-- Interactive Waitlist Client Checkboxes -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Target Standby Clients (South Africa)</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="selected-recipients-count">0 clients selected</span>
+</div>
+<div class="flex flex-col space-y-2" id="broadcast-recipients-list"></div>
+</div>
+<!-- Dispatch Mode Selection -->
+<div class="space-y-2 pt-1">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Queue Dispatch Method</div>
+<label class="flex items-start gap-3 p-2.5 rounded bg-surface-container cursor-pointer">
+<input checked="" class="mt-1 accent-primary" name="dispatch-mode" type="radio" value="tier"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tiered Cascading (Recommended)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sends WhatsApp alert to top ranked client first with 8-min priority window.</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-2.5 rounded bg-surface-container-low cursor-pointer">
+<input class="mt-1 accent-primary" name="dispatch-mode" type="radio" value="blast"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Instant Open-Blast</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dispatches to selected clients at the same time. First to confirm books the appointment.</span>
+</div>
+</label>
+</div>
+<!-- Legal Compliance Note -->
+<div class="flex items-center gap-2 p-2.5 rounded bg-surface-container-high/60 text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Double opted-in per South African POPIA standard. Unsubscribe reply supported.</span>
+</div>
+<!-- Dispatch Actions -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-3.5 px-4 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow active:scale-[0.98] transition-transform flex items-center justify-center gap-2 hover:bg-primary-container" id="confirm-broadcast-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span id="broadcast-submit-text">Send Offer to 3 Clients</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed bottom-24 left-4 right-4 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none" id="toast-msg">
+<div class="bg-inverse-surface text-inverse-on-surface p-3.5 rounded-lg shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[22px]" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md flex-1" id="toast-text">Action completed successfully.</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BOTTOM NAVIGATION -->
+<nav class="fixed bottom-0 w-full z-40 pb-safe bg-surface/90 backdrop-blur-xl border-t border-surface-container-high shadow-[0_-1px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold">
+<div class="flex justify-around items-center h-20 px-space-base">
+<a class="nav-item flex flex-col items-center justify-center min-w-[64px] min-h-[48px] py-1 transition-colors text-primary font-semibold" data-path="dashboard" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<span class="font-label-md text-label-md mt-1">Dashboard</span>
+</a>
+<a class="nav-item flex flex-col items-center justify-center min-w-[64px] min-h-[48px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="waitlist" href="#">
+<span class="material-symbols-outlined text-[24px]">format_list_bulleted</span>
+<span class="font-label-md text-label-md mt-1">Waitlist</span>
+</a>
+<a class="nav-item flex flex-col items-center justify-center min-w-[64px] min-h-[48px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+<span class="font-label-md text-label-md mt-1">Settings</span>
+</a>
+</div>
+</nav>
+<script>
+  (function() {
+    // -------------------------------------------------------------
+    // DATA CONFIGURATION & STATE
+    // -------------------------------------------------------------
+    let activeServices = [];
+    let editingServiceId = null;
+    let waitlistSearchTimer = null;
+    let waitlistRequestId = 0;
+    let editingWaitlistClientId = null;
+    let waitlistAvailabilityFilter = '';
+    let waitlistVipFilter = '';
+    let editingOpeningId = null;
+    let currentSentCount = 0;
+    const serviceCategories = [
+      'Beauty and Hair',
+      'Home Services',
+      'Education and Tutoring',
+      'Health and Wellness',
+      'Other'
+    ];
+
+    // -------------------------------------------------------------
+    // DOM REFERENCES
+    // -------------------------------------------------------------
+    const navItems = document.querySelectorAll('.nav-item');
+    const viewDashboard = document.getElementById('view-dashboard');
+    const viewWaitlist = document.getElementById('view-waitlist');
+    const viewSettings = document.getElementById('view-settings');
+    const backToDashBtn = document.getElementById('back-to-dashboard-btn');
+    const headerSettingsShortcut = document.getElementById('header-settings-shortcut');
+    const headerLogo = document.getElementById('header-logo');
+
+    // Dashboard dynamic items
+    const bizNameDisplay = document.getElementById('biz-name-display');
+    const bizLocationDisplay = document.getElementById('biz-location-display');
+    const metricOpenCount = document.getElementById('metric-open-count');
+    const metricSentCount = document.getElementById('metric-sent-count');
+    const metricSavedSum = document.getElementById('metric-saved-sum');
+    const metricAppointmentsWeek = document.getElementById('metric-appointments-week');
+    const slotsBadge = document.getElementById('slots-badge');
+    const slotsContainer = document.getElementById('slots-container');
+    const activityContainer = document.getElementById('activity-container');
+
+    // Settings elements
+    const settingsBizName = document.getElementById('settings-biz-name');
+    const settingsHubLoc = document.getElementById('settings-hub-loc');
+    const settingsPhone = document.getElementById('settings-phone');
+    const settingsLeadProvider = document.getElementById('settings-lead-provider');
+    const catalogListContainer = document.getElementById('catalog-list-container');
+    const serviceCategoryFilter = document.getElementById('service-category-filter');
+    const openAddServiceBtn = document.getElementById('open-add-service-btn');
+    const newServiceForm = document.getElementById('new-service-form');
+    const saveNewServiceEntry = document.getElementById('save-new-service-entry');
+    const cancelNewService = document.getElementById('cancel-new-service');
+    const newServiceName = document.getElementById('new-service-name');
+    const newServiceDuration = document.getElementById('new-service-duration');
+    const newServicePrice = document.getElementById('new-service-price');
+    const newServiceCategory = document.getElementById('new-service-category');
+    const saveSettingsBtn = document.getElementById('save-settings-btn');
+
+    // Modal elements: Add Opening
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const addModal = document.getElementById('add-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const addOpeningForm = document.getElementById('add-opening-form');
+    const formService = document.getElementById('form-service');
+    const formProvider = document.getElementById('form-provider');
+    const openingFormTitle = document.getElementById('opening-form-title');
+    const openingSubmitLabel = document.getElementById('opening-submit-label');
+    const modalBizSublabel = document.getElementById('modal-biz-sublabel');
+    const formPrice = document.getElementById('form-price');
+    const quoteRequiredChk = document.getElementById('quote-required-chk');
+    const durationPicker = document.getElementById('duration-picker');
+    const selectedDurationInput = document.getElementById('selected-duration');
+    const durButtons = durationPicker?.querySelectorAll('.dur-btn');
+    const timeChips = document.querySelectorAll('.time-chip');
+
+    // Broadcast Modal elements
+    const broadcastModal = document.getElementById('broadcast-modal');
+    const closeBroadcastBtn = document.getElementById('close-broadcast-btn');
+    const broadcastServiceName = document.getElementById('broadcast-service-name');
+    const broadcastPrice = document.getElementById('broadcast-price');
+    const broadcastDetails = document.getElementById('broadcast-details');
+    const broadcastMessagePreview = document.getElementById('broadcast-message-preview');
+    const broadcastSubmitText = document.getElementById('broadcast-submit-text');
+    const confirmBroadcastBtn = document.getElementById('confirm-broadcast-btn');
+    const selectedRecipientsCount = document.getElementById('selected-recipients-count');
+    const broadcastRecipientsList = document.getElementById('broadcast-recipients-list');
+    const waitlistCreateOpeningBtn = document.getElementById('waitlist-create-opening-btn');
+    const waitlistSearchInput = document.getElementById('waitlist-search-input');
+    const waitlistItemsContainer = document.getElementById('waitlist-items-container');
+    const waitlistCountBadge = document.getElementById('waitlist-count-badge');
+    const waitlistClientFormWrap = document.getElementById('waitlist-client-form-wrap');
+    const waitlistClientName = document.getElementById('waitlist-client-name');
+    const waitlistClientPhone = document.getElementById('waitlist-client-phone');
+    const waitlistClientAvailability = document.getElementById('waitlist-client-availability');
+    const waitlistClientPreferredTime = document.getElementById('waitlist-client-preferred-time');
+    const waitlistClientPreferredService = document.getElementById('waitlist-client-preferred-service');
+    const waitlistClientChannel = document.getElementById('waitlist-client-channel');
+    const waitlistClientConsent = document.getElementById('waitlist-client-consent');
+    const waitlistClientVip = document.getElementById('waitlist-client-vip');
+    const waitlistFormTitle = document.getElementById('waitlist-form-title');
+    const saveWaitlistClientBtn = document.getElementById('save-waitlist-client');
+
+    // Toast
+    const toastMsg = document.getElementById('toast-msg');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+
+    function showToast(message, icon = 'check_circle') {
+      if (!toastMsg) return;
+      toastText.textContent = message;
+      if (toastIcon) toastIcon.textContent = icon;
+      toastMsg.classList.remove('translate-y-32', 'opacity-0');
+      toastMsg.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toastMsg.classList.remove('translate-y-0', 'opacity-100');
+        toastMsg.classList.add('translate-y-32', 'opacity-0');
+      }, 3000);
+    }
+
+    async function apiRequest(url, options = {}) {
+      const response = await fetch(url, {
+        ...options,
+        headers: {
+          'Content-Type': 'application/json',
+          ...(options.headers || {})
+        }
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(data.error || 'The request could not be completed.');
+      }
+      return data;
+    }
+
+    async function loadOpenings() {
+      try {
+        const data = await apiRequest('/api/openings');
+        renderOpenings(data.openings);
+        const liveCount = data.openings.filter(opening => ['open', 'broadcasting'].includes(opening.status)).length;
+        if (metricOpenCount) metricOpenCount.textContent = liveCount.toString();
+        if (slotsBadge) slotsBadge.textContent = `${liveCount} Live`;
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    }
+
+    async function loadDashboardData() {
+      try {
+        const data = await apiRequest('/api/dashboard');
+        updateBusinessProfileDisplay(data.business);
+        metricOpenCount.textContent = data.metrics.openCount.toString();
+        metricSentCount.textContent = data.metrics.sentCount.toString();
+        metricSavedSum.textContent = `R${Number(data.metrics.savedTotal).toLocaleString('en-ZA')}`;
+        metricAppointmentsWeek.textContent = `${data.metrics.appointmentsThisWeek} appointments this week`;
+        currentSentCount = data.metrics.sentCount;
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    }
+
+    async function loadActivity() {
+      try {
+        const data = await apiRequest('/api/activity');
+        renderActivity(data.activities);
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    }
+
+    function renderActivity(activities) {
+      activityContainer.innerHTML = '';
+      if (activities.length === 0) {
+        const emptyState = document.createElement('p');
+        emptyState.className = 'bg-surface-container-lowest p-3 rounded border border-surface-container-low text-body-sm text-on-surface-variant';
+        emptyState.textContent = 'No recent appointments yet.';
+        activityContainer.appendChild(emptyState);
+        return;
+      }
+
+      activities.forEach(activity => {
+        const card = document.createElement('div');
+        card.className = 'flex items-center justify-between bg-surface-container-lowest p-3 rounded shadow-sm border border-surface-container-low';
+        const clientInfo = document.createElement('div');
+        clientInfo.className = 'flex items-center gap-3 min-w-0';
+        const initials = activity.clientName.split(/\s+/).slice(0, 2).map(part => part[0] || '').join('').toUpperCase();
+        const avatar = document.createElement('div');
+        avatar.className = 'w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold font-label-md text-label-md shrink-0';
+        avatar.textContent = initials;
+        const details = document.createElement('div');
+        details.className = 'flex flex-col min-w-0';
+        const clientName = document.createElement('span');
+        clientName.className = 'font-label-lg text-label-lg font-semibold text-on-surface';
+        clientName.textContent = activity.clientName;
+        const service = document.createElement('span');
+        service.className = 'font-body-sm text-body-sm text-on-surface-variant';
+        service.textContent = `${activity.serviceName} appointment confirmed`;
+        details.append(clientName, service);
+        clientInfo.append(avatar, details);
+
+        const appointmentInfo = document.createElement('div');
+        appointmentInfo.className = 'flex flex-col items-end shrink-0';
+        const appointmentDate = document.createElement('span');
+        appointmentDate.className = 'font-label-sm text-label-sm text-primary font-semibold';
+        appointmentDate.textContent = `${activity.date} • ${activity.startTime}`;
+        const price = document.createElement('span');
+        price.className = 'font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full mt-0.5';
+        price.textContent = `R${Number(activity.price).toLocaleString('en-ZA')}`;
+        appointmentInfo.append(appointmentDate, price);
+
+        card.append(clientInfo, appointmentInfo);
+        activityContainer.appendChild(card);
+      });
+    }
+
+    function renderOpenings(openings) {
+      slotsContainer.innerHTML = '';
+      if (openings.length === 0) {
+        const emptyState = document.createElement('p');
+        emptyState.className = 'bg-surface-container-lowest p-space-base rounded-lg border border-surface-container-low text-body-sm text-on-surface-variant';
+        emptyState.textContent = 'No appointments have been added yet.';
+        slotsContainer.appendChild(emptyState);
+        return;
+      }
+
+      openings.forEach(opening => {
+        const card = document.createElement('div');
+        card.className = 'slot-card flex flex-col bg-surface-container-lowest p-space-base rounded-lg shadow-sm space-y-3 border border-surface-container-low';
+        card.dataset.openingId = opening.id;
+
+        const header = document.createElement('div');
+        header.className = 'flex items-start justify-between gap-2';
+        const serviceDetails = document.createElement('div');
+        serviceDetails.className = 'flex flex-col min-w-0';
+        const titleRow = document.createElement('div');
+        titleRow.className = 'flex items-center gap-2 flex-wrap';
+        const title = document.createElement('span');
+        title.className = 'font-headline-sm text-headline-sm text-on-surface font-semibold truncate card-service-title';
+        title.textContent = opening.serviceName;
+        const duration = document.createElement('span');
+        duration.className = 'font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-medium px-2 py-0.5 rounded-full';
+        duration.textContent = `${opening.duration} mins`;
+        titleRow.append(title, duration);
+        if (opening.incentive) {
+          const incentive = document.createElement('span');
+          incentive.className = 'font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full font-semibold';
+          incentive.textContent = opening.incentive;
+          titleRow.appendChild(incentive);
+        }
+        const providerLine = document.createElement('div');
+        providerLine.className = 'flex items-center gap-1.5 mt-1 text-on-surface-variant font-body-sm text-body-sm';
+        providerLine.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">face_3</span>';
+        const provider = document.createElement('span');
+        provider.className = 'card-staff-line';
+        provider.textContent = `Provider: ${opening.providerName}`;
+        providerLine.appendChild(provider);
+        serviceDetails.append(titleRow, providerLine);
+
+        const headingActions = document.createElement('div');
+        headingActions.className = 'flex items-center gap-1';
+        const price = document.createElement('span');
+        price.className = 'font-headline-md text-headline-md text-primary font-bold';
+        price.textContent = `R${opening.price}`;
+        const editButton = document.createElement('button');
+        editButton.type = 'button';
+        editButton.className = 'w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all edit-slot-btn';
+        editButton.setAttribute('aria-label', 'Edit Appointment');
+        editButton.innerHTML = '<span class="material-symbols-outlined text-[18px]">edit</span>';
+        editButton.dataset.openingId = opening.id;
+        if (!['open', 'broadcasting'].includes(opening.status)) editButton.disabled = true;
+        headingActions.append(price, editButton);
+        header.append(serviceDetails, headingActions);
+
+        const schedule = document.createElement('div');
+        schedule.className = 'flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low px-3 py-2 rounded';
+        const dateLine = document.createElement('div');
+        dateLine.className = 'flex items-center gap-1.5';
+        dateLine.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>';
+        const dateText = document.createElement('span');
+        dateText.className = 'font-medium text-on-surface';
+        dateText.textContent = formatOpeningDate(opening.date);
+        dateLine.appendChild(dateText);
+        const timeRange = document.createElement('span');
+        timeRange.className = 'font-semibold text-on-surface';
+        timeRange.textContent = `${opening.startTime} – ${getOpeningEndTime(opening.startTime, opening.duration)}`;
+        schedule.append(dateLine, timeRange);
+
+        const footer = document.createElement('div');
+        footer.className = 'flex items-center justify-between pt-1 gap-2';
+        const statusLine = document.createElement('div');
+        statusLine.className = 'flex items-center gap-1.5 min-w-0';
+        const statusDot = document.createElement('span');
+        statusDot.className = `w-2 h-2 rounded-full ${opening.status === 'open' ? 'bg-primary-container animate-pulse' : opening.status === 'broadcasting' ? 'bg-secondary-container' : opening.status === 'claimed' ? 'bg-primary' : 'bg-surface-container-highest'}`;
+        const statusText = document.createElement('span');
+        statusText.className = 'font-label-sm text-label-sm text-on-surface font-medium status-tag';
+        statusText.textContent = opening.status[0].toUpperCase() + opening.status.slice(1);
+        statusLine.append(statusDot, statusText);
+        footer.appendChild(statusLine);
+
+        const actionGroup = document.createElement('div');
+        actionGroup.className = 'flex items-center gap-1';
+        if (opening.status === 'open') {
+          const broadcastButton = document.createElement('button');
+          broadcastButton.type = 'button';
+          broadcastButton.className = 'broadcast-trigger-btn flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold active:scale-95 transition-transform shadow-sm';
+          broadcastButton.dataset.openingId = opening.id;
+          broadcastButton.dataset.price = `R${opening.price}`;
+          broadcastButton.dataset.service = opening.serviceName;
+          broadcastButton.dataset.provider = opening.providerName;
+          broadcastButton.dataset.time = opening.startTime;
+          broadcastButton.dataset.date = formatOpeningDate(opening.date);
+          broadcastButton.innerHTML = '<span class="material-symbols-outlined text-[16px]">podcasts</span><span>Offer to waitlist</span>';
+          actionGroup.appendChild(broadcastButton);
+        }
+        if (['open', 'broadcasting', 'claimed'].includes(opening.status)) {
+          const cancelButton = document.createElement('button');
+          cancelButton.type = 'button';
+          cancelButton.className = 'w-8 h-8 rounded-full flex items-center justify-center text-error hover:bg-surface-container active:scale-95 transition-all cancel-opening-btn';
+          cancelButton.setAttribute('aria-label', 'Cancel Appointment');
+          cancelButton.title = 'Cancel Appointment';
+          cancelButton.dataset.openingId = opening.id;
+          cancelButton.innerHTML = '<span class="material-symbols-outlined text-[18px]">block</span>';
+          actionGroup.appendChild(cancelButton);
+        }
+        footer.appendChild(actionGroup);
+        card.append(header, schedule, footer);
+        slotsContainer.appendChild(card);
+      });
+      bindCardActions();
+    }
+
+    function formatOpeningDate(date) {
+      return new Date(`${date}T00:00:00`).toLocaleDateString('en-GB', {
+        weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric'
+      });
+    }
+
+    function getOpeningEndTime(startTime, duration) {
+      const [hours, minutes] = startTime.split(':').map(Number);
+      const endMinutes = (hours * 60 + minutes + duration) % (24 * 60);
+      return `${String(Math.floor(endMinutes / 60)).padStart(2, '0')}:${String(endMinutes % 60).padStart(2, '0')}`;
+    }
+
+    async function loadWaitlist() {
+      const requestId = ++waitlistRequestId;
+      const params = new URLSearchParams();
+      const search = waitlistSearchInput.value.trim();
+      if (search) params.set('search', search);
+      if (waitlistAvailabilityFilter) params.set('availability', waitlistAvailabilityFilter);
+      if (waitlistVipFilter) params.set('vip', waitlistVipFilter);
+
+      try {
+        const query = params.toString();
+        const data = await apiRequest(`/api/waitlist${query ? `?${query}` : ''}`);
+        if (requestId !== waitlistRequestId) return;
+        renderWaitlistClients(data.clients);
+        waitlistCountBadge.textContent = `${data.count} Standby`;
+      } catch (error) {
+        if (requestId === waitlistRequestId) showToast(error.message, 'error');
+      }
+    }
+
+    function renderWaitlistClients(clients) {
+      waitlistItemsContainer.innerHTML = '';
+      if (clients.length === 0) {
+        const emptyState = document.createElement('p');
+        emptyState.className = 'bg-surface-container-lowest p-3.5 rounded-lg border border-surface-container-low text-body-sm text-on-surface-variant';
+        emptyState.textContent = 'No waitlist clients match these filters.';
+        waitlistItemsContainer.appendChild(emptyState);
+        return;
+      }
+
+      clients.forEach(client => {
+        const entry = document.createElement('div');
+        entry.className = 'waitlist-entry bg-surface-container-lowest p-3.5 rounded-lg shadow-sm border border-surface-container-low flex items-start justify-between gap-3';
+
+        const identity = document.createElement('div');
+        identity.className = 'flex items-start gap-3 min-w-0';
+        const initials = client.name.split(/\s+/).slice(0, 2).map(part => part[0] || '').join('').toUpperCase();
+        const avatar = document.createElement('div');
+        avatar.className = `w-10 h-10 rounded-full ${client.vip ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-secondary-fixed text-on-secondary-fixed'} flex items-center justify-center font-bold shrink-0`;
+        avatar.textContent = initials;
+
+        const details = document.createElement('div');
+        details.className = 'min-w-0';
+        const titleRow = document.createElement('div');
+        titleRow.className = 'flex items-center gap-1.5 flex-wrap';
+        const name = document.createElement('span');
+        name.className = 'font-label-lg text-label-lg font-semibold text-on-surface';
+        name.textContent = client.name;
+        titleRow.appendChild(name);
+        if (client.vip) {
+          const vipBadge = document.createElement('span');
+          vipBadge.className = 'bg-primary/10 text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold';
+          vipBadge.textContent = `VIP • ${client.appointmentsCount} Appointments`;
+          titleRow.appendChild(vipBadge);
+        }
+
+        const info = document.createElement('p');
+        info.className = 'font-body-sm text-body-sm text-on-surface-variant mt-0.5';
+        const infoParts = [client.availability];
+        if (client.preferredTime) infoParts.push(`Prefers ${client.preferredTime.toLowerCase()}`);
+        if (client.phone) infoParts.push(formatSouthAfricanPhone(client.phone));
+        info.textContent = infoParts.join(' • ');
+
+        const consentRow = document.createElement('div');
+        const consentGranted = client.consentStatus === 'granted';
+        const canMessage = consentGranted && Boolean(client.phone);
+        consentRow.className = `flex items-center gap-1 text-[11px] font-semibold mt-1 ${consentGranted ? 'text-primary' : 'text-error'}`;
+        const consentIcon = document.createElement('span');
+        consentIcon.className = 'material-symbols-outlined text-[13px]';
+        consentIcon.textContent = consentGranted ? 'check_circle' : 'lock';
+        const consentText = document.createElement('span');
+        consentText.textContent = client.consentStatus === 'granted'
+          ? `POPIA Consent Granted${client.preferredChannel ? ` • ${client.preferredChannel.toUpperCase()} opt-in active` : ''}`
+          : client.consentStatus === 'withdrawn'
+            ? 'POPIA Consent Withdrawn • Messaging disabled'
+            : 'POPIA Consent Pending • Awaiting confirmation';
+        consentRow.append(consentIcon, consentText);
+
+        const consentSelect = document.createElement('select');
+        consentSelect.className = 'mt-1 h-8 max-w-full rounded bg-surface-container-low px-2 text-[11px] text-on-surface border border-surface-container-high';
+        consentSelect.setAttribute('aria-label', `Change consent for ${client.name}`);
+        for (const [value, label] of [['pending', 'Pending'], ['granted', 'Granted'], ['withdrawn', 'Withdrawn']]) {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = label;
+          consentSelect.appendChild(option);
+        }
+        consentSelect.value = client.consentStatus;
+        consentSelect.addEventListener('change', async () => {
+          try {
+            const result = await apiRequest(`/api/waitlist/${client.id}`, {
+              method: 'PATCH',
+              body: JSON.stringify({ consentStatus: consentSelect.value })
+            });
+            await loadWaitlist();
+            showToast(result.message, 'verified_user');
+          } catch (error) {
+            showToast(error.message, 'error');
+            await loadWaitlist();
+          }
+        });
+
+        details.append(titleRow, info, consentRow, consentSelect);
+        identity.append(avatar, details);
+
+        const actions = document.createElement('div');
+        actions.className = 'flex items-center shrink-0';
+        const editButton = createWaitlistIconButton('edit', `Edit ${client.name}`, 'text-primary');
+        editButton.addEventListener('click', () => openWaitlistClientForm(client));
+        const deleteButton = createWaitlistIconButton('delete', `Remove ${client.name}`, 'text-error');
+        deleteButton.addEventListener('click', async () => {
+          try {
+            const result = await apiRequest(`/api/waitlist/${client.id}`, { method: 'DELETE' });
+            await loadWaitlist();
+            showToast(result.message, 'delete');
+          } catch (error) {
+            showToast(error.message, 'error');
+          }
+        });
+        const pingButton = createWaitlistIconButton('send', `Quick Ping ${client.name}`, 'text-primary');
+        pingButton.disabled = !canMessage;
+        if (!canMessage) pingButton.classList.add('opacity-50', 'cursor-not-allowed');
+        pingButton.addEventListener('click', () => {
+          if (canMessage) {
+            showToast('Direct standby ping sent to client WhatsApp!', 'send');
+          }
+        });
+        actions.append(editButton, deleteButton, pingButton);
+
+        entry.append(identity, actions);
+        waitlistItemsContainer.appendChild(entry);
+      });
+    }
+
+    function createWaitlistIconButton(icon, label, colorClass) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `w-8 h-8 rounded-full flex items-center justify-center ${colorClass} hover:bg-surface-container-low`;
+      button.title = label;
+      button.setAttribute('aria-label', label);
+      button.innerHTML = `<span class="material-symbols-outlined text-[18px]">${icon}</span>`;
+      return button;
+    }
+
+    function formatSouthAfricanPhone(phone) {
+      return phone.replace(/^\+27(\d{2})(\d{3})(\d{4})$/, '+27 $1 $2 $3');
+    }
+
+    function openWaitlistClientForm(client = null) {
+      editingWaitlistClientId = client?.id || null;
+      waitlistFormTitle.textContent = client ? 'Edit Waitlist Client' : 'Add Waitlist Client';
+      saveWaitlistClientBtn.textContent = client ? 'Update Client' : 'Save Client';
+      waitlistClientName.value = client?.name || '';
+      waitlistClientPhone.value = client?.phone || '';
+      waitlistClientAvailability.value = client?.availability === 'Not specified' ? '' : (client?.availability || '');
+      waitlistClientPreferredTime.value = client?.preferredTime || '';
+      waitlistClientPreferredService.value = client?.preferredService || '';
+      waitlistClientChannel.value = client?.preferredChannel || '';
+      waitlistClientConsent.value = client?.consentStatus || 'pending';
+      waitlistClientVip.checked = client?.vip || false;
+      waitlistClientFormWrap.classList.remove('hidden');
+      waitlistClientName.focus();
+    }
+
+    function closeWaitlistClientForm() {
+      editingWaitlistClientId = null;
+      waitlistClientFormWrap.classList.add('hidden');
+      waitlistClientName.value = '';
+      waitlistClientPhone.value = '';
+      waitlistClientAvailability.value = '';
+      waitlistClientPreferredTime.value = '';
+      waitlistClientPreferredService.value = '';
+      waitlistClientChannel.value = '';
+      waitlistClientConsent.value = 'pending';
+      waitlistClientVip.checked = false;
+      waitlistFormTitle.textContent = 'Add Waitlist Client';
+      saveWaitlistClientBtn.textContent = 'Save Client';
+    }
+
+    document.getElementById('add-waitlist-client-btn').addEventListener('click', () => openWaitlistClientForm());
+    document.getElementById('cancel-waitlist-form').addEventListener('click', closeWaitlistClientForm);
+    document.getElementById('cancel-waitlist-form-text').addEventListener('click', closeWaitlistClientForm);
+
+    saveWaitlistClientBtn.addEventListener('click', async () => {
+      const clientData = {
+        name: waitlistClientName.value.trim(),
+        phone: waitlistClientPhone.value.trim(),
+        availability: waitlistClientAvailability.value.trim(),
+        preferredTime: waitlistClientPreferredTime.value.trim() || null,
+        preferredService: waitlistClientPreferredService.value.trim() || null,
+        preferredChannel: waitlistClientChannel.value || null,
+        consentStatus: waitlistClientConsent.value,
+        vip: waitlistClientVip.checked
+      };
+      const editing = editingWaitlistClientId !== null;
+      const url = editing ? `/api/waitlist/${editingWaitlistClientId}` : '/api/waitlist';
+
+      try {
+        const result = await apiRequest(url, {
+          method: editing ? 'PATCH' : 'POST',
+          body: JSON.stringify(clientData)
+        });
+        closeWaitlistClientForm();
+        await loadWaitlist();
+        showToast(result.message, 'check_circle');
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    });
+
+    waitlistSearchInput.addEventListener('input', () => {
+      clearTimeout(waitlistSearchTimer);
+      waitlistSearchTimer = setTimeout(loadWaitlist, 300);
+    });
+
+    document.querySelectorAll('.waitlist-filter').forEach(button => {
+      button.addEventListener('click', () => {
+        waitlistAvailabilityFilter = button.dataset.filter === 'today' ? 'today' : '';
+        waitlistVipFilter = button.dataset.filter === 'vip' ? 'true' : '';
+        document.querySelectorAll('.waitlist-filter').forEach(filter => {
+          const selected = filter === button;
+          filter.classList.toggle('bg-primary', selected);
+          filter.classList.toggle('text-on-primary', selected);
+          filter.classList.toggle('font-semibold', selected);
+          filter.classList.toggle('bg-surface-container-low', !selected);
+          filter.classList.toggle('text-on-surface', !selected);
+        });
+        loadWaitlist();
+      });
+    });
+
+    // -------------------------------------------------------------
+    // NAVIGATION SWITCHER
+    // -------------------------------------------------------------
+    function switchTab(targetTab) {
+      // Hide all views
+      viewDashboard.classList.add('hidden');
+      viewWaitlist.classList.add('hidden');
+      viewSettings.classList.add('hidden');
+
+      // Update Nav highlighting
+      navItems.forEach(item => {
+        const path = item.getAttribute('data-path');
+        if (path === targetTab) {
+          item.classList.add('text-primary', 'font-semibold');
+          item.classList.remove('text-on-surface-variant');
+        } else {
+          item.classList.remove('text-primary', 'font-semibold');
+          item.classList.add('text-on-surface-variant');
+        }
+      });
+
+      if (targetTab === 'dashboard') {
+        viewDashboard.classList.remove('hidden');
+        loadDashboardData();
+        loadOpenings();
+        loadActivity();
+      } else if (targetTab === 'waitlist') {
+        viewWaitlist.classList.remove('hidden');
+        loadWaitlist();
+      } else if (targetTab === 'settings') {
+        viewSettings.classList.remove('hidden');
+        loadSettingsData();
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const path = item.getAttribute('data-path');
+        switchTab(path);
+      });
+    });
+
+    backToDashBtn?.addEventListener('click', () => switchTab('dashboard'));
+    headerSettingsShortcut?.addEventListener('click', () => switchTab('settings'));
+    headerLogo?.addEventListener('click', () => switchTab('dashboard'));
+    waitlistCreateOpeningBtn?.addEventListener('click', () => {
+      switchTab('dashboard');
+      openModalBtn?.click();
+    });
+
+    // -------------------------------------------------------------
+    // BUSINESS SETTINGS & SERVICE CATALOG
+    // -------------------------------------------------------------
+    function updateBusinessProfileDisplay(settings) {
+      settingsBizName.value = settings.name;
+      bizNameDisplay.textContent = settings.name;
+      settingsHubLoc.value = settings.location;
+      settingsPhone.value = settings.phone;
+      settingsLeadProvider.value = settings.leadProvider;
+      document.getElementById('popia-enforce-chk').checked = settings.requirePopiaConsent;
+      bizLocationDisplay.textContent = settings.location;
+      modalBizSublabel.textContent = settings.name;
+    }
+
+    async function loadServices() {
+      const data = await apiRequest('/api/services');
+      activeServices = data.services;
+      await loadCatalogForCategory();
+      populateServiceDropdown();
+    }
+
+    async function loadCatalogForCategory() {
+      const category = serviceCategoryFilter.value;
+      const url = category ? `/api/services?category=${encodeURIComponent(category)}` : '/api/services';
+      const data = await apiRequest(url);
+      renderCatalogList(data.services);
+    }
+
+    async function loadSettingsData() {
+      try {
+        const settingsData = await apiRequest('/api/business/settings');
+        updateBusinessProfileDisplay(settingsData.settings);
+        await loadServices();
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    }
+
+    function renderCatalogList(services) {
+      if (!catalogListContainer) return;
+      catalogListContainer.innerHTML = '';
+
+      serviceCategories.forEach(category => {
+        const categoryServices = services.filter(service => service.category === category);
+        if (categoryServices.length === 0) return;
+
+        const group = document.createElement('section');
+        group.className = 'space-y-2';
+        const heading = document.createElement('h5');
+        heading.className = 'font-label-md text-label-md text-on-surface-variant font-semibold pt-2';
+        heading.textContent = category;
+        group.appendChild(heading);
+
+        categoryServices.forEach(service => {
+          const row = document.createElement('div');
+          row.className = 'flex items-center justify-between bg-surface-container-low px-3 py-2.5 rounded border border-surface-container-high text-body-sm';
+          const details = document.createElement('div');
+          details.className = 'flex flex-col';
+          const name = document.createElement('span');
+          name.className = 'font-semibold text-on-surface';
+          name.textContent = service.name;
+          const summary = document.createElement('span');
+          summary.className = 'text-on-surface-variant font-label-sm';
+          summary.textContent = `${service.duration} mins • R${service.price}`;
+          details.append(name, summary);
+
+          const actions = document.createElement('div');
+          actions.className = 'flex items-center';
+          const editButton = document.createElement('button');
+          editButton.type = 'button';
+          editButton.className = 'text-primary hover:opacity-80 p-1 edit-catalog-item';
+          editButton.title = 'Edit service';
+          editButton.setAttribute('aria-label', `Edit ${service.name}`);
+          editButton.innerHTML = '<span class="material-symbols-outlined text-[18px]">edit</span>';
+          const deleteButton = document.createElement('button');
+          deleteButton.type = 'button';
+          deleteButton.className = 'text-error hover:opacity-80 p-1 delete-catalog-item';
+          deleteButton.title = 'Remove service';
+          deleteButton.setAttribute('aria-label', `Delete ${service.name}`);
+          deleteButton.innerHTML = '<span class="material-symbols-outlined text-[18px]">delete</span>';
+          actions.append(editButton, deleteButton);
+          row.append(details, actions);
+          group.appendChild(row);
+
+          editButton.addEventListener('click', () => {
+            editingServiceId = service.id;
+            newServiceName.value = service.name;
+            newServiceDuration.value = service.duration;
+            newServicePrice.value = service.price;
+            newServiceCategory.value = service.category;
+            document.querySelector('#new-service-form h5').textContent = 'Edit Service';
+            saveNewServiceEntry.textContent = 'Update Service';
+            newServiceForm.classList.remove('hidden');
+            newServiceName.focus();
+          });
+
+          deleteButton.addEventListener('click', async () => {
+            try {
+              const result = await apiRequest(`/api/services/${service.id}`, { method: 'DELETE' });
+              await loadServices();
+              showToast(result.message, 'delete');
+            } catch (error) {
+              showToast(error.message, 'error');
+            }
+          });
+        });
+        catalogListContainer.appendChild(group);
+      });
+    }
+
+    function populateServiceDropdown() {
+      if (!formService) return;
+      formService.innerHTML = '';
+
+      activeServices.forEach(svc => {
+        const opt = document.createElement('option');
+        opt.value = String(svc.id);
+        opt.setAttribute('data-dur', svc.duration);
+        opt.setAttribute('data-price', String(svc.price));
+        opt.textContent = `${svc.name} (${svc.category}) — R${svc.price} (${svc.duration} min)`;
+        formService.appendChild(opt);
+      });
+
+      // Trigger change to set default price & duration
+      triggerServiceSelection();
+    }
+
+    serviceCategoryFilter.addEventListener('change', () => {
+      loadCatalogForCategory().catch(error => showToast(error.message, 'error'));
+    });
+
+    // Add new service inside settings
+    openAddServiceBtn?.addEventListener('click', () => {
+      editingServiceId = null;
+      newServiceName.value = '';
+      newServiceDuration.value = '60';
+      newServicePrice.value = '450';
+      newServiceCategory.value = 'Beauty and Hair';
+      document.querySelector('#new-service-form h5').textContent = 'New Service';
+      saveNewServiceEntry.textContent = 'Add Service';
+      newServiceForm?.classList.remove('hidden');
+      newServiceName?.focus();
+    });
+
+    cancelNewService?.addEventListener('click', () => {
+      editingServiceId = null;
+      newServiceForm?.classList.add('hidden');
+      document.querySelector('#new-service-form h5').textContent = 'New Service';
+      saveNewServiceEntry.textContent = 'Add Service';
+    });
+
+    saveNewServiceEntry?.addEventListener('click', async () => {
+      const title = newServiceName.value.trim();
+      const duration = Number(newServiceDuration.value);
+      const price = Number(newServicePrice.value);
+
+      if (!title) {
+        showToast('Please enter a service title.', 'error');
+        return;
+      }
+      if (!Number.isInteger(duration) || duration <= 0) {
+        showToast('Duration must be a positive whole number of minutes.', 'error');
+        return;
+      }
+      if (!Number.isFinite(price) || price <= 0) {
+        showToast('Price must be a positive number.', 'error');
+        return;
+      }
+
+      const editing = editingServiceId !== null;
+      const url = editing ? `/api/services/${editingServiceId}` : '/api/services';
+      try {
+        const result = await apiRequest(url, {
+          method: editing ? 'PATCH' : 'POST',
+          body: JSON.stringify({
+            name: title,
+            category: newServiceCategory.value,
+            duration,
+            price
+          })
+        });
+        editingServiceId = null;
+        newServiceForm.classList.add('hidden');
+        document.querySelector('#new-service-form h5').textContent = 'New Service';
+        saveNewServiceEntry.textContent = 'Add Service';
+        await loadServices();
+        showToast(result.message, 'playlist_add');
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    });
+
+    // Save Settings Button
+    saveSettingsBtn?.addEventListener('click', async () => {
+      const settings = {
+        name: settingsBizName.value.trim(),
+        location: settingsHubLoc.value.trim(),
+        phone: settingsPhone.value.trim(),
+        leadProvider: settingsLeadProvider.value.trim(),
+        requirePopiaConsent: document.getElementById('popia-enforce-chk').checked
+      };
+
+      try {
+        const result = await apiRequest('/api/business/settings', {
+          method: 'PUT',
+          body: JSON.stringify(settings)
+        });
+        updateBusinessProfileDisplay(result.settings);
+        showToast(result.message, 'task_alt');
+        setTimeout(() => switchTab('dashboard'), 800);
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    });
+
+    // -------------------------------------------------------------
+    // ADD OPENING MODAL INTERACTIONS
+    // -------------------------------------------------------------
+    function triggerServiceSelection() {
+      if (!formService) return;
+      const selected = formService.options[formService.selectedIndex];
+      if (!selected) return;
+
+      const price = selected.getAttribute('data-price');
+      const dur = selected.getAttribute('data-dur');
+
+      if (price && price.toLowerCase().includes('quote')) {
+        if (quoteRequiredChk) quoteRequiredChk.checked = true;
+        if (formPrice) {
+          formPrice.disabled = true;
+          formPrice.value = 'Quote';
+        }
+      } else {
+        if (quoteRequiredChk) quoteRequiredChk.checked = false;
+        if (formPrice) {
+          formPrice.disabled = false;
+          formPrice.value = price || '600';
+        }
+      }
+
+      if (dur) {
+        let durationMatched = false;
+        durButtons?.forEach(b => {
+          if (b.getAttribute('data-val') === dur) {
+            b.click();
+            durationMatched = true;
+          }
+        });
+        if (!durationMatched) {
+          durButtons?.forEach(button => {
+            button.className = 'dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors';
+          });
+          selectedDurationInput.value = dur;
+        }
+      }
+    }
+
+    formService?.addEventListener('change', triggerServiceSelection);
+
+    quoteRequiredChk?.addEventListener('change', () => {
+      if (quoteRequiredChk.checked) {
+        formPrice.disabled = true;
+        formPrice.value = 'Quote';
+      } else {
+        formPrice.disabled = false;
+        const selected = formService.options[formService.selectedIndex];
+        formPrice.value = selected?.getAttribute('data-price') || '600';
+      }
+    });
+
+    durButtons?.forEach(btn => {
+      btn.addEventListener('click', () => {
+        durButtons.forEach(b => {
+          b.className = 'dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors';
+        });
+        btn.className = 'dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-primary text-on-primary shadow-sm';
+        selectedDurationInput.value = btn.getAttribute('data-val');
+      });
+    });
+
+    timeChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const timeInput = document.getElementById('form-time');
+        if (timeInput) timeInput.value = chip.getAttribute('data-time');
+      });
+    });
+
+    function setDefaultOpeningDate() {
+      const date = new Date();
+      date.setDate(date.getDate() + 1);
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    }
+
+    function getCurrentLocalDate() {
+      const date = new Date();
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    }
+
+    function openOpeningForm(opening = null) {
+      editingOpeningId = opening?.id || null;
+      addOpeningForm.reset();
+      openingFormTitle.textContent = opening ? 'Edit Appointment' : 'Create Appointment';
+      openingSubmitLabel.textContent = opening ? 'Update Appointment' : 'Save Appointment';
+      document.getElementById('form-date').min = getCurrentLocalDate();
+      document.getElementById('form-date').value = opening?.date || setDefaultOpeningDate();
+      document.getElementById('form-time').value = opening?.startTime || '11:00';
+      document.getElementById('form-incentive').value = opening?.incentive || '';
+      formProvider.value = opening?.providerName || settingsLeadProvider.value;
+
+      if (opening && !Array.from(formService.options).some(option => option.value === String(opening.serviceId))) {
+        const archivedServiceOption = document.createElement('option');
+        archivedServiceOption.value = String(opening.serviceId);
+        archivedServiceOption.textContent = `${opening.serviceName} (archived)`;
+        archivedServiceOption.setAttribute('data-dur', opening.duration);
+        archivedServiceOption.setAttribute('data-price', opening.price);
+        formService.appendChild(archivedServiceOption);
+      }
+      if (opening) formService.value = String(opening.serviceId);
+      triggerServiceSelection();
+
+      const durationValue = String(opening?.duration || 90);
+      selectedDurationInput.value = durationValue;
+      let hasDurationButton = false;
+      durButtons?.forEach(button => {
+        if (button.dataset.val === durationValue) {
+          button.click();
+          hasDurationButton = true;
+        }
+      });
+      if (!hasDurationButton) {
+        durButtons?.forEach(button => {
+          button.className = 'dur-btn h-11 rounded font-label-md text-label-md font-semibold bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors';
+        });
+      }
+      if (opening) {
+        formPrice.value = opening.price;
+        quoteRequiredChk.checked = false;
+      }
+      addModal?.classList.remove('hidden');
+    }
+
+    function closeOpeningForm() {
+      editingOpeningId = null;
+      addModal?.classList.add('hidden');
+      addOpeningForm.reset();
+      openingFormTitle.textContent = 'Create Appointment';
+      openingSubmitLabel.textContent = 'Save Appointment';
+    }
+
+    openModalBtn?.addEventListener('click', () => openOpeningForm());
+    closeModalBtn?.addEventListener('click', closeOpeningForm);
+
+    addModal?.addEventListener('click', (event) => {
+      if (event.target === addModal) closeOpeningForm();
+    });
+
+    addOpeningForm?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!addOpeningForm.reportValidity()) return;
+      if (quoteRequiredChk.checked) {
+        showToast('Openings require a numeric price. Turn off “Quote required” to continue.', 'error');
+        return;
+      }
+
+      const duration = Number(selectedDurationInput.value);
+      const price = Number(formPrice.value);
+      const openingData = {
+        serviceId: Number(formService.value),
+        date: document.getElementById('form-date').value,
+        startTime: document.getElementById('form-time').value,
+        duration,
+        price,
+        providerName: formProvider.value.trim(),
+        incentive: document.getElementById('form-incentive').value.trim() || null
+      };
+
+      const editing = editingOpeningId !== null;
+      const url = editing ? `/api/openings/${editingOpeningId}` : '/api/openings';
+      try {
+        const result = await apiRequest(url, {
+          method: editing ? 'PATCH' : 'POST',
+          body: JSON.stringify(openingData)
+        });
+        closeOpeningForm();
+        await loadOpenings();
+        showToast(result.message, 'add_task');
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    });
+
+    // -------------------------------------------------------------
+    // BROADCAST SLOT MODAL & ACTIONS
+    // -------------------------------------------------------------
+    let currentActiveBroadcastSlotCard = null;
+
+    function bindCardActions() {
+      document.querySelectorAll('.broadcast-trigger-btn').forEach(btn => {
+        btn.onclick = (e) => {
+          e.stopPropagation();
+          const card = btn.closest('.slot-card');
+          currentActiveBroadcastSlotCard = card;
+
+          const sName = btn.getAttribute('data-service') || 'Service';
+          const sTime = btn.getAttribute('data-time') || '15:30';
+          const sPrice = btn.getAttribute('data-price') || 'R850';
+          const providerName = btn.getAttribute('data-provider') || 'Provider';
+          const sDate = btn.getAttribute('data-date') || 'Today';
+
+          if (broadcastServiceName) broadcastServiceName.textContent = sName;
+          if (broadcastPrice) broadcastPrice.textContent = sPrice;
+          if (broadcastDetails) broadcastDetails.textContent = `${sDate} • ${sTime} • ${providerName}`;
+          if (broadcastMessagePreview) {
+            broadcastMessagePreview.textContent = `SlotRescue • ${settingsBizName.value || 'Demo Business'} has a ${sName} appointment on ${sDate} at ${sTime}. Reply to book.`;
+          }
+
+          broadcastModal?.classList.remove('hidden');
+          loadBroadcastRecipients();
+        };
+      });
+
+      document.querySelectorAll('.edit-slot-btn').forEach(btn => {
+        btn.onclick = async (event) => {
+          event.stopPropagation();
+          try {
+            const data = await apiRequest(`/api/openings/${btn.dataset.openingId}`);
+            openOpeningForm(data.opening);
+          } catch (error) {
+            showToast(error.message, 'error');
+          }
+        };
+      });
+
+      document.querySelectorAll('.cancel-opening-btn').forEach(btn => {
+        btn.onclick = async (event) => {
+          event.stopPropagation();
+          try {
+            const result = await apiRequest(`/api/openings/${btn.dataset.openingId}`, {
+              method: 'PATCH',
+              body: JSON.stringify({ status: 'cancelled' })
+            });
+            await loadOpenings();
+            showToast(result.message, 'event_busy');
+          } catch (error) {
+            showToast(error.message, 'error');
+          }
+        };
+      });
+    }
+
+    function updateRecipientCount() {
+      const checkedBoxes = document.querySelectorAll('.recipient-checkbox:checked');
+      const count = checkedBoxes.length;
+      if (selectedRecipientsCount) {
+        selectedRecipientsCount.textContent = `${count} client${count === 1 ? '' : 's'} selected`;
+      }
+      if (broadcastSubmitText) {
+        broadcastSubmitText.textContent = count > 0 ? `Send Offer to ${count} Client${count === 1 ? '' : 's'}` : 'Select At Least 1 Client';
+      }
+      if (confirmBroadcastBtn) {
+        confirmBroadcastBtn.disabled = count === 0;
+      }
+    }
+
+    async function loadBroadcastRecipients() {
+      broadcastRecipientsList.innerHTML = '';
+      try {
+        const data = await apiRequest('/api/waitlist');
+        data.clients.forEach(client => {
+          const canMessage = client.consentStatus === 'granted' && Boolean(client.phone);
+          const label = document.createElement('label');
+          label.className = `client-check-item flex items-start gap-3 p-3 rounded ${canMessage ? 'bg-surface-container cursor-pointer transition-colors hover:bg-surface-container-high' : 'bg-surface-container-low opacity-60 cursor-not-allowed'}`;
+
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.className = 'mt-1 recipient-checkbox accent-primary w-4 h-4 rounded';
+          checkbox.dataset.clientId = client.id;
+          checkbox.dataset.name = client.name;
+          checkbox.checked = canMessage;
+          checkbox.disabled = !canMessage;
+          checkbox.addEventListener('change', updateRecipientCount);
+
+          const details = document.createElement('div');
+          details.className = 'flex flex-col flex-1';
+          const heading = document.createElement('div');
+          heading.className = 'flex items-center justify-between';
+          const name = document.createElement('span');
+          name.className = 'font-label-lg text-label-lg text-on-surface font-semibold';
+          name.textContent = client.name;
+          const status = document.createElement('span');
+          status.className = `font-label-sm text-label-sm font-semibold ${canMessage ? 'text-primary' : 'text-error'}`;
+          status.textContent = canMessage
+            ? (client.vip ? 'VIP' : client.availability)
+            : !client.phone ? 'Phone missing' : `Consent ${client.consentStatus}`;
+          heading.append(name, status);
+          const contact = document.createElement('span');
+          contact.className = 'font-body-sm text-body-sm text-on-surface-variant';
+          const channel = client.preferredChannel ? `${client.preferredChannel.toUpperCase()}: ` : '';
+          const phone = client.phone ? formatSouthAfricanPhone(client.phone) : 'No phone number';
+          contact.textContent = `${channel}${phone} • ${canMessage ? 'POPIA consent granted' : 'Cannot message without valid contact and consent'}`;
+          details.append(heading, contact);
+          label.append(checkbox, details);
+          broadcastRecipientsList.appendChild(label);
+        });
+        if (data.clients.length === 0) {
+          const emptyState = document.createElement('p');
+          emptyState.className = 'font-body-sm text-body-sm text-on-surface-variant';
+          emptyState.textContent = 'No clients are currently on the waitlist.';
+          broadcastRecipientsList.appendChild(emptyState);
+        }
+        updateRecipientCount();
+      } catch (error) {
+        showToast(error.message, 'error');
+      }
+    }
+
+    closeBroadcastBtn?.addEventListener('click', () => {
+      broadcastModal?.classList.add('hidden');
+    });
+
+    broadcastModal?.addEventListener('click', (e) => {
+      if (e.target === broadcastModal) broadcastModal.classList.add('hidden');
+    });
+
+    confirmBroadcastBtn?.addEventListener('click', () => {
+      const checkedCount = document.querySelectorAll('.recipient-checkbox:checked').length;
+      if (checkedCount === 0) return;
+
+      confirmBroadcastBtn.disabled = true;
+      confirmBroadcastBtn.innerHTML = `
+        <span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+        <span>Sending WhatsApp Alerts...</span>
+      `;
+
+      setTimeout(() => {
+        confirmBroadcastBtn.disabled = false;
+        confirmBroadcastBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px]">send</span>
+          <span id="broadcast-submit-text">Send Offer to ${checkedCount} Clients</span>
+        `;
+        broadcastModal?.classList.add('hidden');
+
+        // Update card visual state without marking it completely filled yet
+        if (currentActiveBroadcastSlotCard) {
+          const statusTag = currentActiveBroadcastSlotCard.querySelector('.status-tag');
+          if (statusTag) {
+            statusTag.textContent = `Offer sent to ${checkedCount} clients • Awaiting response`;
+            statusTag.classList.add('text-secondary', 'font-semibold');
+          }
+          const triggerBtn = currentActiveBroadcastSlotCard.querySelector('.broadcast-trigger-btn');
+          if (triggerBtn) {
+            triggerBtn.classList.remove('bg-primary');
+            triggerBtn.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+            triggerBtn.innerHTML = `
+              <span class="material-symbols-outlined text-[16px] text-secondary">hourglass_top</span>
+              <span>Pending Claims</span>
+            `;
+          }
+        }
+
+        // Increment Sent metric
+        currentSentCount += checkedCount;
+        if (metricSentCount) metricSentCount.textContent = currentSentCount.toString();
+
+        showToast(`SlotRescue sent an appointment offer to ${checkedCount} consented clients.`, 'campaign');
+      }, 1000);
+    });
+
+    // -------------------------------------------------------------
+    // REFRESH & QUICK ACTIONS
+    // -------------------------------------------------------------
+    const refreshBtn = document.getElementById('refresh-slots');
+    refreshBtn?.addEventListener('click', () => {
+      const icon = refreshBtn.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.add('animate-spin');
+      loadOpenings().finally(() => icon?.classList.remove('animate-spin'));
+    });
+
+    document.querySelectorAll('.quick-ping-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showToast('Direct standby ping sent to client WhatsApp!', 'send');
+      });
+    });
+
+    // Initial setup
+    loadSettingsData();
+    loadDashboardData();
+    loadOpenings();
+    loadActivity();
+    bindCardActions();
+  })();
+</script></body></html>
